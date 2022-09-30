@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -34,7 +36,22 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  background: var(--body-background);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.main_heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 32px;
+  line-height: 43px;
+}
+
+.secondary_heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 24px;
+  line-height: 31px;
 }
 
 /* A elements that don't have a class get default styles */
@@ -55,6 +72,19 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+:root {
+  --very-dark-grey: hsl(248, 10%, 15%);
+  --dark-grey: hsl(251, 9%, 53%);
+  --grey: hsl(252, 11%, 91%);
+  --almost-white: hsl(248, 15%, 11%);
+  --neon-green: hsl(127, 100%, 82%);
+  --yellow: hsl(42, 91%, 68%);
+  --orange: hsl(13, 95%, 66%);
+  --red: hsl(0, 91%, 63%);
+
+  --body-background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
