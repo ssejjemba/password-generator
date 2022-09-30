@@ -1,0 +1,80 @@
+.progress__input {
+  background-color: var(--very-dark-grey);
+  max-width: 476px;
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.progress__input:focus {
+  outline: transparent;
+}
+
+/* WebKit */
+.progress__input::-webkit-slider-thumb {
+  background-color: var(--almost-white);
+  border: 0;
+  border-radius: 50%;
+  display: block;
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.15s linear, border 0.15s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.progress__input:focus::-webkit-slider-thumb,
+.progress__input::-webkit-slider-thumb:hover {
+  background-color: var(--very-dark-grey);
+  border: 2px solid var(--neon-green);
+}
+
+/* Firefox */
+.progress__input::-moz-range-thumb {
+  background-color: var(--almost-white);
+  border: 0;
+  border-radius: 50%;
+  display: block;
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.15s linear, border 0.15s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.progress__input:focus::-moz-range-thumb,
+.progress__input::-moz-range-thumb:hover {
+  background-color: var(--very-dark-grey);
+  border: 2px solid var(--neon-green);
+}
+
+/* All the same stuff for IE */
+.progress__input::-ms-thumb {
+  background-color: var(--almost-white);
+  border: 0;
+  border-radius: 50%;
+  display: block;
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.15s linear, border 0.15s ease-in-out;
+  appearance: none;
+}
+.progress__input:focus::-ms-thumb,
+.progress__input::-ms-thumb:hover {
+  background-color: var(--very-dark-grey);
+  border: 2px solid var(--neon-green);
+}
+
+/** FF*/
+.progress__input::-moz-range-progress {
+  background-color: var(--neon-green);
+}
+.progress__input::-moz-range-track {
+  background-color: var(--very-dark-grey);
+}
+/* IE*/
+.progress__input::-ms-fill-lower {
+  background-color: var(--neon-green);
+}
+.progress__input::-ms-fill-upper {
+  background-color: var(--very-dark-grey);
+}
