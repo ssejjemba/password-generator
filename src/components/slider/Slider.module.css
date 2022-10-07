@@ -1,5 +1,5 @@
 .progress__input {
-  background-color: var(--very-dark-grey);
+  background: var(--very-dark-grey);
   max-width: 476px;
   width: 100%;
   height: 8px;
@@ -77,4 +77,18 @@
 }
 .progress__input::-ms-fill-upper {
   background-color: var(--very-dark-grey);
+}
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .progress__input {
+    --percent: 50%;
+    background: linear-gradient(
+      to right,
+      var(--neon-green) 0%,
+      var(--neon-green) var(--percent),
+      var(--very-dark-grey) var(--percent),
+      var(--very-dark-grey) 100%
+    );
+  }
 }

@@ -3,7 +3,7 @@ import { Slider } from "./components/slider/Slider";
 function App() {
   return (
     <div>
-      <Slider onChange={console.log} />
+      <Slider onChange={() => {}} />
     </div>
   );
 }
