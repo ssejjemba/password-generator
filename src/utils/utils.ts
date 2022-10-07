@@ -11,7 +11,7 @@ const shuffleString = (inputString: string): string => {
   return a.join("");
 };
 
-const randomPassGenerator = (length: number, chars: string) => {
+const randomPassGenerator = (length: number, chars: string): string => {
   const randomArray = Array.from(
     {
       length: length,
@@ -66,7 +66,7 @@ const generateUnionCharSetFromFlags = (flags: Flags): string => {
   return shuffleString(unionSet);
 };
 
-export const createPassword = (flags: Flags) => {
+export const createPassword = (flags: Flags): string => {
   const allowedCharacterSet = generateUnionCharSetFromFlags(flags);
   return randomPassGenerator(4, allowedCharacterSet);
 };
