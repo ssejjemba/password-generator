@@ -9,26 +9,26 @@ import Display from "./components/display/Display";
 import Input from "./components/input/Input";
 import { Slider } from "./components/slider/Slider";
 import { STRENGTHS } from "./constants/enums";
+import Controls from "./containers/controls/Controls";
+import Layout from "./containers/Layout/Layout";
+import Screen from "./containers/screen/Screen";
+import { getPasswordStrength } from "./utils/utils";
+
+const SCREEN_ID = "___display_input_screen___";
 
 function App() {
   const [count, setCount] = useState(10);
-  return (
-    <div>
-      <Slider onChange={() => {}} />
+  const [password, setPassword] = useState("");
 
-      <CheckBoxGroup
-        data={[
-          { id: "01", labelText: "Include Uppercase Letters" },
-          { id: "02", labelText: "Include Lowercase Letters" },
-          { id: "03", labelText: "Include Numbers" },
-        ]}
-        onChange={() => {}}
+  return (
+    <Layout>
+      <Screen id={SCREEN_ID} value={password} />
+      <Controls
+        characterLength={count}
+        setCharacterLength={setCount}
+        currentStrength={getPasswordStrength(count)}
       />
-      <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
-      <Button />
-      <Counter count={count} setCount={setCount} defaultCount={10} />
-      <Display id="display_input" value="" />
-    </div>
+    </Layout>
   );
 }
 

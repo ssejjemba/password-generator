@@ -43,6 +43,14 @@ body {
   line-height: 24px;
 }
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main_heading {
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
@@ -55,6 +63,23 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
+}
+
+@media only screen and (max-width: 500px) {
+  .main_heading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .secondary_heading {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 /* A elements that don't have a class get default styles */
@@ -78,7 +103,8 @@ select {
 }
 
 :root {
-  --very-dark-grey: hsl(248, 11%, 15%);
+  --very-dark-grey: hsl(248, 15%, 11%);
+  --card-bg: hsl(248, 10%, 15%);
   --dark-grey: hsl(251, 9%, 53%);
   --grey: hsl(252, 11%, 91%);
   --almost-white: #e6e5ea;

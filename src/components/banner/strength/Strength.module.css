@@ -7,6 +7,7 @@
   align-items: center;
   padding: 0px 32px;
   background: var(--very-dark-grey);
+  margin: 32px 0;
 }
 
 .key {
@@ -24,4 +25,10 @@
   margin-right: 15.5px;
   text-transform: uppercase;
   color: var(--almost-white);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0px 16px;
+  }
 }

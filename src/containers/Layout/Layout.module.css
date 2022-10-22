@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.app_name {
+  color: var(--dark-grey);
+  text-align: center;
+  margin-bottom: 31px;
+}

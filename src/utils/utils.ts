@@ -1,3 +1,5 @@
+import { STRENGTHS } from "../constants/enums";
+
 const shuffleString = (inputString: string): string => {
   var a = inputString.split(""),
     n = a.length;
@@ -69,4 +71,15 @@ const generateUnionCharSetFromFlags = (flags: Flags): string => {
 export const createPassword = (flags: Flags): string => {
   const allowedCharacterSet = generateUnionCharSetFromFlags(flags);
   return randomPassGenerator(4, allowedCharacterSet);
+};
+
+export const getPasswordStrength = (length: number) => {
+  if (length < 2) {
+    return STRENGTHS.TOO_WEAK;
+  } else if (length < 4) {
+    return STRENGTHS.WEAK;
+  } else if (length < 8) {
+    return STRENGTHS.MEDIUM;
+  }
+  return STRENGTHS.STRONG;
 };
