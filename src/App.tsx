@@ -1,5 +1,6 @@
 import StrengthBanner from "./components/banner/strength/Strength";
 import BarList from "./components/barlist/BarList";
+import Button from "./components/button/Button";
 import { CheckBoxGroup } from "./components/checkboxgroup/CheckBoxGroup";
 import { Slider } from "./components/slider/Slider";
 import { STRENGTHS } from "./constants/enums";
@@ -18,6 +19,7 @@ function App() {
         onChange={() => {}}
       />
       <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
+      <Button />
     </div>
   );
 }
