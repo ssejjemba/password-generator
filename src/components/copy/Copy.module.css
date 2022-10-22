@@ -19,7 +19,7 @@
   text-transform: uppercase;
   pointer-events: none;
   color: var(--neon-green);
-  transition: transform 0.4s linear, opacity 0.2s ease-in-out;
+  transition: transform 0.3s linear, opacity 0.2s ease-in-out;
 }
 
 .show {

@@ -35,7 +35,7 @@ export default function Controls(props: ControlProps) {
         onChange={props.onChangeFlag}
         defaultValues={props.defaultFlags}
       />
-      <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
+      <StrengthBanner currentStrength={props.currentStrength} />
       <Button onClick={props.onSubmit} />
     </div>
   );

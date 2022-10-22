@@ -25,7 +25,7 @@ export default function Copy(props: CopyProps) {
       if (timer) {
         clearTimeout(timer);
       }
-      timer = setTimeout(resetCopyState, 4000);
+      timer = setTimeout(resetCopyState, 2500);
     });
   };
   return (
