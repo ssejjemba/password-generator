@@ -1,3 +1,4 @@
+import StrengthBanner from "./components/banner/strength/Strength";
 import BarList from "./components/barlist/BarList";
 import { CheckBoxGroup } from "./components/checkboxgroup/CheckBoxGroup";
 import { Slider } from "./components/slider/Slider";
@@ -16,10 +17,7 @@ function App() {
         ]}
         onChange={() => {}}
       />
-      <BarList currentStrength={STRENGTHS.TOO_WEAK} />
-      <BarList currentStrength={STRENGTHS.WEAK} />
-      <BarList currentStrength={STRENGTHS.MEDIUM} />
-      <BarList currentStrength={STRENGTHS.STRONG} />
+      <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
     </div>
   );
 }
