@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--neon-green);
+  transition: all 0.3s ease-in;
+}
+
+.container:hover {
+  color: var(--almost-white);
+}
+
+.icon {
+  fill: currentColor;
+  cursor: pointer;
+}
+
+.text {
+  margin-right: 16px;
+  text-transform: uppercase;
+  pointer-events: none;
+  transition: transform 0.4s linear, opacity 0.2s ease-in-out;
+}
+
+.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.hide {
+  transform: translateX(30px);
+  opacity: 0;
+}

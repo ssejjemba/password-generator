@@ -3,6 +3,7 @@ import StrengthBanner from "./components/banner/strength/Strength";
 import BarList from "./components/barlist/BarList";
 import Button from "./components/button/Button";
 import { CheckBoxGroup } from "./components/checkboxgroup/CheckBoxGroup";
+import Copy from "./components/copy/Copy";
 import Counter from "./components/counter/Counter";
 import Input from "./components/input/Input";
 import { Slider } from "./components/slider/Slider";
@@ -26,6 +27,7 @@ function App() {
       <Button />
       <Counter count={count} setCount={setCount} defaultCount={10} />
       <Input id="display_value" value="" />
+      <Copy id="display_value" />
     </div>
   );
 }
