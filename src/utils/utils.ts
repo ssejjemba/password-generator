@@ -32,12 +32,18 @@ const symbolSet = "`!@#$%^&*()_+-={};':\\|,.<>/?~";
 
 const numberSet = "1234567890";
 
-type Flags = {
+export type Flags = {
   hasLowerCase: boolean;
   hasUpperCase: boolean;
   hasSymbols: boolean;
   hasNumbers: boolean;
 };
+
+export type FlagName =
+  | "hasLowerCase"
+  | "hasUpperCase"
+  | "hasSymbols"
+  | "hasNumbers";
 
 type FlagsMapping = {
   hasLowerCase: string;
@@ -68,9 +74,9 @@ const generateUnionCharSetFromFlags = (flags: Flags): string => {
   return shuffleString(unionSet);
 };
 
-export const createPassword = (flags: Flags): string => {
+export const createPassword = (flags: Flags, length: number): string => {
   const allowedCharacterSet = generateUnionCharSetFromFlags(flags);
-  return randomPassGenerator(4, allowedCharacterSet);
+  return randomPassGenerator(length, allowedCharacterSet);
 };
 
 export const getPasswordStrength = (length: number) => {

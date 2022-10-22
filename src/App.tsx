@@ -12,13 +12,48 @@ import { STRENGTHS } from "./constants/enums";
 import Controls from "./containers/controls/Controls";
 import Layout from "./containers/Layout/Layout";
 import Screen from "./containers/screen/Screen";
-import { getPasswordStrength } from "./utils/utils";
+import { createPassword, Flags, getPasswordStrength } from "./utils/utils";
 
 const SCREEN_ID = "___display_input_screen___";
 
+const DefaultFlags: Flags = {
+  hasLowerCase: true,
+  hasNumbers: true,
+  hasUpperCase: true,
+  hasSymbols: false,
+};
 function App() {
   const [count, setCount] = useState(10);
   const [password, setPassword] = useState("");
+
+  const generatePassword = () => {
+    const lowerCheck = document.getElementById(
+      "hasLowerCase"
+    ) as HTMLInputElement;
+    const upperCheck = document.getElementById(
+      "hasUpperCase"
+    ) as HTMLInputElement;
+    const numberCheck = document.getElementById(
+      "hasNumbers"
+    ) as HTMLInputElement;
+    const symbolCheck = document.getElementById(
+      "hasSymbols"
+    ) as HTMLInputElement;
+
+    if (!lowerCheck || !upperCheck || !numberCheck || !symbolCheck) {
+      return;
+    }
+
+    const currentFlags: Flags = {
+      hasLowerCase: lowerCheck.checked,
+      hasNumbers: numberCheck.checked,
+      hasSymbols: symbolCheck.checked,
+      hasUpperCase: upperCheck.checked,
+    };
+
+    const generatedPassword = createPassword(currentFlags, count);
+    setPassword(generatedPassword);
+  };
 
   return (
     <Layout>
@@ -27,6 +62,9 @@ function App() {
         characterLength={count}
         setCharacterLength={setCount}
         currentStrength={getPasswordStrength(count)}
+        onChangeFlag={console.log}
+        defaultFlags={DefaultFlags}
+        onSubmit={generatePassword}
       />
     </Layout>
   );

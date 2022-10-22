@@ -5,9 +5,9 @@ import classes from "./Button.module.css";
 // For this application, I only have one button so I'll not try to make it general purpose.
 // Can be refactored later to be reusable
 
-export default function Button() {
+export default function Button(props: { onClick: () => void }) {
   return (
-    <button className={classes["button"]}>
+    <button className={classes["button"]} onClick={props.onClick}>
       <span className={classes["text"]}>Generate</span>
       <svg
         className={classes["icon"]}
