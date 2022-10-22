@@ -1,0 +1,15 @@
+.bar {
+  display: inline-block;
+  height: 28px;
+  width: 10px;
+}
+
+.full {
+  border: none;
+  background-color: currentColor;
+}
+
+.empty {
+  border: 2px solid var(--almost-white);
+  background-color: transparent;
+}
