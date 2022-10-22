@@ -1,11 +1,14 @@
+import { useState } from "react";
 import StrengthBanner from "./components/banner/strength/Strength";
 import BarList from "./components/barlist/BarList";
 import Button from "./components/button/Button";
 import { CheckBoxGroup } from "./components/checkboxgroup/CheckBoxGroup";
+import Counter from "./components/counter/Counter";
 import { Slider } from "./components/slider/Slider";
 import { STRENGTHS } from "./constants/enums";
 
 function App() {
+  const [count, setCount] = useState(10);
   return (
     <div>
       <Slider onChange={() => {}} />
@@ -20,6 +23,7 @@ function App() {
       />
       <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
       <Button />
+      <Counter count={count} setCount={setCount} defaultCount={10} />
     </div>
   );
 }

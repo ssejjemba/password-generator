@@ -5,6 +5,10 @@ import classes from "./Slider.module.css";
 
 type SliderProps = {
   onChange: (event: ChangeEvent) => void;
+  min?: number;
+  max?: number;
+  step?: number;
+  defaultValue?: number;
 };
 
 export function Slider(props: SliderProps) {
@@ -15,10 +19,10 @@ export function Slider(props: SliderProps) {
       className={classes["progress__input"]}
       ref={ref}
       type="range"
-      min={0}
-      max={10}
-      step={1}
-      defaultValue={5}
+      min={props.min ? props.min : 0}
+      max={props.max || 10}
+      step={props.step || 1}
+      defaultValue={props.defaultValue || 5}
       onChange={props.onChange}
     />
   );
