@@ -5,6 +5,7 @@ import Button from "./components/button/Button";
 import { CheckBoxGroup } from "./components/checkboxgroup/CheckBoxGroup";
 import Copy from "./components/copy/Copy";
 import Counter from "./components/counter/Counter";
+import Display from "./components/display/Display";
 import Input from "./components/input/Input";
 import { Slider } from "./components/slider/Slider";
 import { STRENGTHS } from "./constants/enums";
@@ -26,8 +27,7 @@ function App() {
       <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
       <Button />
       <Counter count={count} setCount={setCount} defaultCount={10} />
-      <Input id="display_value" value="" />
-      <Copy id="display_value" />
+      <Display id="display_input" value="" />
     </div>
   );
 }
