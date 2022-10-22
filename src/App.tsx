@@ -4,6 +4,7 @@ import BarList from "./components/barlist/BarList";
 import Button from "./components/button/Button";
 import { CheckBoxGroup } from "./components/checkboxgroup/CheckBoxGroup";
 import Counter from "./components/counter/Counter";
+import Input from "./components/input/Input";
 import { Slider } from "./components/slider/Slider";
 import { STRENGTHS } from "./constants/enums";
 
@@ -24,6 +25,7 @@ function App() {
       <StrengthBanner currentStrength={STRENGTHS.MEDIUM} />
       <Button />
       <Counter count={count} setCount={setCount} defaultCount={10} />
+      <Input id="display_value" value="" />
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.input {
+  border: none;
+  background: none;
+  outline: none;
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: var(--almost-white);
+  opacity: 1;
+}
+
+.input::placeholder {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  color: var(--almost-white);
+
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
