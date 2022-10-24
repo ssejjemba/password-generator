@@ -21,6 +21,7 @@ export default function Controls(props: ControlProps) {
   return (
     <div className={classes["container"]}>
       <Counter
+        id="__password_generator_content_length__"
         count={props.characterLength}
         setCount={props.setCharacterLength}
         defaultCount={10}

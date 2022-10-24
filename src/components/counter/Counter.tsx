@@ -7,18 +7,22 @@ type CouterProps = {
   count: number;
   setCount: (val: number) => void;
   defaultCount: number;
+  id: string;
 };
 
 export default function Counter(props: CouterProps) {
   return (
     <div className={classes["container"]}>
       <div className={classes["display"]}>
-        <span className={classes["key"]}>Character Length</span>
+        <label htmlFor={props.id} className={classes["key"]}>
+          Character Length
+        </label>
         <span className={`${classes["value"]} main_heading`}>
           {props.count}
         </span>
       </div>
       <Slider
+        id={props.id}
         min={0}
         max={20}
         step={1}

@@ -9,6 +9,7 @@ type SliderProps = {
   max?: number;
   step?: number;
   defaultValue?: number;
+  id: string;
 };
 
 export function Slider(props: SliderProps) {
@@ -16,6 +17,7 @@ export function Slider(props: SliderProps) {
   useChromeSlider(ref);
   return (
     <input
+      id={props.id}
       className={classes["progress__input"]}
       ref={ref}
       type="range"
